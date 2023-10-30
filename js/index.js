@@ -5,8 +5,7 @@ class Game {
     this.positionX = 0;
     this.positionY = 0;
     this.elements = [];
-  }
-
+  }  
   createFruits() {
     this.elements = document.createElement("div");
     this.elements.className = "elements";
