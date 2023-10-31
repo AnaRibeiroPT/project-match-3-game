@@ -11,11 +11,6 @@ body {
   background-size: cover;
 }
 
-.elements {
-  background-color: salmon;
-  position: relative;
-}
-
 .container {
   display: flex;
   justify-content: center;
@@ -80,6 +75,10 @@ body {
   position: relative;
   flex: 0 1 calc(16.6% - 4px);
   margin: 2px;
+}
+
+.enlarged {
+  transform: scale(1.2);
 }
 
 #container-background {
