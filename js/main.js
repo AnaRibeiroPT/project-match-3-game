@@ -25,27 +25,62 @@ const fruitsData = [
   { name: "orange", img: "orange.png" },
 ]
 
-const columns = ["A", "B", "C", "D"];
-const rows = [1, 2, 3, 4, 5, 6];
+const playButton = document.getElementById("startButton");
+const bgMusic = document.getElementById("backgroundMusic");
+const audioElement = document.getElementById("audioStart");
 
+playButton.addEventListener("click", function () {
+  audioElement.play();
 
-const game = new Game(fruitsData);
-game.shuffleFruits();
-game.createFruits(columns, rows);
+  bgMusic.play();
 
+  const fadeDuration = 5000;
+  const fadeStep = 0.02;
+  let currentVolume = 0;
 
-let firstFruit = null;
-document.querySelectorAll(".fruits").forEach((fruit) => {
-  fruit.addEventListener("click", () => {
-    if (firstFruit === null) {
-      fruit.querySelector(".fruitsImg").classList.add("enlarged");
-      firstFruit = fruit;
+  const fadeInterval = setInterval(function () {
+    if (currentVolume < 1) {
+      currentVolume += fadeStep;
+      backgroundMusic.volume = currentVolume;
     } else {
-      game.swapFruits(firstFruit, fruit);
-      firstFruit = null;
-      document.querySelectorAll(".fruits").forEach((fruit) => {
-        fruit.querySelector(".fruitsImg").classList.remove("enlarged");
-      });
+      clearInterval(fadeInterval);
     }
+  }, fadeDuration * fadeStep);
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const startButton = document.getElementById("startButton");
+  const gameContainer = document.getElementById("gameContainer");
+
+  startButton.addEventListener("click", function () {
+    startButton.style.display = "none";
+    gameContainer.style.display = "block";
+    
+
+    const columns = ["A", "B", "C", "D"];
+    const rows = [1, 2, 3, 4, 5, 6];
+
+
+    const game = new Game(fruitsData);
+    game.shuffleFruits();
+    game.createFruits(columns, rows);
+
+
+    let firstFruit = null;
+    document.querySelectorAll(".fruits").forEach((fruit) => {
+      fruit.addEventListener("click", () => {
+        if (firstFruit === null) {
+          fruit.querySelector(".fruitsImg").classList.add("enlarged");
+          firstFruit = fruit;
+        } else {
+          game.swapFruits(firstFruit, fruit);
+          firstFruit = null;
+          document.querySelectorAll(".fruits").forEach((fruit) => {
+            fruit.querySelector(".fruitsImg").classList.remove("enlarged");
+          });
+        }
+      });
+    });
   });
 });

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
 html,
 body {
   height: 100%;
@@ -9,6 +11,34 @@ body {
 body {
   background-image: url("../images/background.jpg");
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#startButton {
+  box-shadow: inset 13px -39px 0px -19px #f5726c;
+  background-color: #f1897c;
+  border-radius: 42px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  padding: 13px 31px;
+  text-decoration: none;
+  text-shadow: 4px 3px 5px #995753;
+  border: none;
+}
+
+#startButton:hover {
+  background-color: #f5726c;
+}
+
+#startButton:active {
+  position: relative;
+  top: 1px;
 }
 
 .container {

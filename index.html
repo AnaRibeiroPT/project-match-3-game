@@ -10,20 +10,26 @@
 
 <body>
 
+  <button id="startButton">Start Game</button>
+  <audio id="audioStart"> 
+    <source src="./audio/startGame.mp3" type="audio/mpeg"></audio>
+    <audio id="backgroundMusic" loop>
+      <source src="./audio/backgroundMusic.mp3" type="audio/mpeg">
+    </audio>
+  <div id="gameContainer" style="display: none;">
+    <div class="container">
+      <div id="container-div"> </div>
+    </div>
 
-  <div class="container">
-    <div id="container-div"> </div>
-  </div>
+    <div class="counter"></div>
+    <div class="moves"></div>
 
-  <div class="counter"></div>
-  <div class="moves"></div>
-  
-  <div class="container-logo">
-    <div class="logo">
-      <img src="./images/tropical-free-logo.png" alt="tropical-free-logo">
+    <div class="container-logo">
+      <div class="logo">
+        <img src="./images/tropical-free-logo.png" alt="tropical-free-logo">
+      </div>
     </div>
   </div>
-
 
   <script src="./js/index.js"></script>
   <script src="./js/main.js"></script>
