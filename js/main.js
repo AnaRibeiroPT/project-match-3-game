@@ -1,28 +1,54 @@
 const fruitsData = [
+  { name: "dragon-fruit", img: "dragon-fruit.png" },
   { name: "strawberry", img: "strawberry.png" },
-  { name: "grapes", img: "grapes.png" },
-  { name: "lemon", img: "lemon.png" },
-  { name: "apple", img: "apple.png" },
-  { name: "melon", img: "melon.png" },
+  { name: "watermelon", img: "watermelon.png" },
+  { name: "blueberry", img: "blueberry.png" },
   { name: "orange", img: "orange.png" },
+  { name: "banana", img: "banana.png" },
+  { name: "grapes", img: "grapes.png" },
+  { name: "cherry", img: "cherry.png" },
+  { name: "lemon", img: "lemon.png" },
+  { name: "melon", img: "melon.png" },
+  { name: "peach", img: "peach.png" },
+  { name: "lime", img: "lime.png" },
+  { name: "dragon-fruit", img: "dragon-fruit.png" },
   { name: "strawberry", img: "strawberry.png" },
-  { name: "grapes", img: "grapes.png" },
-  { name: "lemon", img: "lemon.png" },
-  { name: "apple", img: "apple.png" },
-  { name: "melon", img: "melon.png" },
+  { name: "watermelon", img: "watermelon.png" },
+  { name: "blueberry", img: "blueberry.png" },
   { name: "orange", img: "orange.png" },
+  { name: "banana", img: "banana.png" },
+  { name: "grapes", img: "grapes.png" },
+  { name: "cherry", img: "cherry.png" },
+  { name: "lemon", img: "lemon.png" },
+  { name: "melon", img: "melon.png" },
+  { name: "peach", img: "peach.png" },
+  { name: "lime", img: "lime.png" },
+  { name: "dragon-fruit", img: "dragon-fruit.png" },
   { name: "strawberry", img: "strawberry.png" },
-  { name: "grapes", img: "grapes.png" },
-  { name: "lemon", img: "lemon.png" },
-  { name: "apple", img: "apple.png" },
-  { name: "melon", img: "melon.png" },
+  { name: "watermelon", img: "watermelon.png" },
+  { name: "blueberry", img: "blueberry.png" },
   { name: "orange", img: "orange.png" },
+  { name: "banana", img: "banana.png" },
+  { name: "grapes", img: "grapes.png" },
+  { name: "cherry", img: "cherry.png" },
+  { name: "lemon", img: "lemon.png" },
+  { name: "melon", img: "melon.png" },
+  { name: "peach", img: "peach.png" },
+  { name: "lime", img: "lime.png" },
+  { name: "dragon-fruit", img: "dragon-fruit.png" },
   { name: "strawberry", img: "strawberry.png" },
-  { name: "grapes", img: "grapes.png" },
-  { name: "lemon", img: "lemon.png" },
-  { name: "apple", img: "apple.png" },
-  { name: "melon", img: "melon.png" },
+  { name: "watermelon", img: "watermelon.png" },
+  { name: "blueberry", img: "blueberry.png" },
   { name: "orange", img: "orange.png" },
+  { name: "banana", img: "banana.png" },
+  { name: "grapes", img: "grapes.png" },
+  { name: "cherry", img: "cherry.png" },
+  { name: "lemon", img: "lemon.png" },
+  { name: "melon", img: "melon.png" },
+  { name: "peach", img: "peach.png" },
+  { name: "lime", img: "lime.png" },
+  { name: "peach", img: "peach.png" },
+  { name: "lime", img: "lime.png" },
 ]
 
 const playButton = document.getElementById("startButton");
@@ -31,7 +57,6 @@ const audioElement = document.getElementById("audioStart");
 
 playButton.addEventListener("click", function () {
   audioElement.play();
-
   bgMusic.play();
 
   const fadeDuration = 5000;
@@ -39,14 +64,13 @@ playButton.addEventListener("click", function () {
   let currentVolume = 0;
 
   const fadeInterval = setInterval(function () {
-    if (currentVolume < 1) {
+    if (currentVolume < 0.2) {
       currentVolume += fadeStep;
-      backgroundMusic.volume = currentVolume;
+      bgMusic.volume = currentVolume;
     } else {
       clearInterval(fadeInterval);
     }
   }, fadeDuration * fadeStep);
-
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -56,10 +80,10 @@ document.addEventListener("DOMContentLoaded", function () {
   startButton.addEventListener("click", function () {
     startButton.style.display = "none";
     gameContainer.style.display = "block";
-    
 
-    const columns = ["A", "B", "C", "D"];
-    const rows = [1, 2, 3, 4, 5, 6];
+
+    const columns = ["A", "B", "C", "D", "E", "F"];
+    const rows = [1, 2, 3, 4, 5, 6, 7, 8];
 
 
     const game = new Game(fruitsData);

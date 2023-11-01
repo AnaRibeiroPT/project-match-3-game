@@ -56,7 +56,9 @@ class Game {
     containerDiv.innerHTML = "";
   }
   matchFruits() {
-    
+    const matchedFruits = [];
+
+
   }
 }
 

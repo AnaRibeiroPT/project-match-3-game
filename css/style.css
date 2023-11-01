@@ -43,6 +43,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -51,16 +52,27 @@ body {
 #container-div {
   display: flex;
   flex-wrap: wrap;
-  width: 40vw;
-  height: 50vh;
+  width: 50vw;
+  height: 37.5vw;
+}
+
+.stats {
+  display: flex;
+}
+
+.info-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .counter,
 .moves {
-  position: absolute;
   opacity: 0.3;
   background-color: gray;
-  border-radius: 50px
+  border-radius: 50px;
+  margin: 10px; 
 }
 
 .counter {
@@ -80,11 +92,10 @@ body {
 .container-logo {
   display: flex;
   align-items: flex-end;
-  position: absolute;
-  top: 10vh;
-  left: 30vw;
   width: 13vw;
   height: 14vh;
+  margin-bottom: 25px;
+  margin-left: 60px;
 }
 
 .logo img {
@@ -103,7 +114,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  flex: 0 1 calc(16.6% - 4px);
+  flex: 0 1 calc(12.5% - 4px);
   margin: 2px;
 }
 
