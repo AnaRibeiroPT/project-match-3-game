@@ -55,6 +55,9 @@ class Game {
     const containerDiv = document.querySelector("#container-div");
     containerDiv.innerHTML = "";
   }
+  matchFruits() {
+    
+  }
 }
 
 function getRowAndColumn(fruit) {

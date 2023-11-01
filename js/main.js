@@ -43,7 +43,6 @@ document.querySelectorAll(".fruits").forEach((fruit) => {
     } else {
       game.swapFruits(firstFruit, fruit);
       firstFruit = null;
-
       document.querySelectorAll(".fruits").forEach((fruit) => {
         fruit.querySelector(".fruitsImg").classList.remove("enlarged");
       });
