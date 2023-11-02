@@ -54,6 +54,9 @@ body {
   flex-wrap: wrap;
   width: 50vw;
   height: 37.5vw;
+  border-style: solid;
+  border-color: rgba(120, 120, 120, 0.2);
+  border-width: 3px;
 }
 
 .stats {
@@ -67,8 +70,7 @@ body {
   width: 100%;
 }
 
-.counter,
-.moves {
+.counter {
   opacity: 0.3;
   background-color: gray;
   border-radius: 50px;
@@ -82,11 +84,17 @@ body {
   height: 8vh;
 }
 
-.moves {
-  top: 15vh;
-  left: 44vw;
+#score {
+  display: flex;
+  position: absolute;
+  font-family: 'Quicksand', sans-serif;
   width: 10vw;
   height: 8vh;
+  top: 10.4vh;
+  left: 61vw;
+  font-size: 24px;
+  font-weight: bold;
+  color: #6BC298;
 }
 
 .container-logo {
